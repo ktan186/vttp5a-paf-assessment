@@ -18,6 +18,10 @@ WORKDIR /app
 
 COPY --from=builder /src/target/movies-0.0.1-SNAPSHOT.jar app.jar
 
+# COPY --from=compiler /app/movies_post_2010.zip /app/movies_post_2010.zip
+
+# COPY --from=compiler /app/director_movies_report.jasper /app/director_movies_report.jasper
+
 ENV PORT=8080
 ENV SPRING_DATASOURCE_URL=jdbc:mysql://host.docker.internal:3306/movies
 ENV SPRING_DATASOURCE_USERNAME=fred
