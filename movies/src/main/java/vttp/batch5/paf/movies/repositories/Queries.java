@@ -8,4 +8,10 @@ public class Queries {
         values (?, ?, ?, ?, ?, ?, ?)
         """;
 
+    public static final String SQL_GET_INFO= 
+        """ 
+        select * from imdb 
+            where imdb_id = ?
+        """;
+
 }

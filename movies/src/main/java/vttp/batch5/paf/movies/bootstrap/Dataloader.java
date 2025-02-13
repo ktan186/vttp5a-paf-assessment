@@ -22,7 +22,9 @@ public class Dataloader implements CommandLineRunner{
     @Override
     public void run(String... args) throws Exception {
         try {
-            movieService.readFile(zipName);
+            // movieService.readFile(zipName);
+            String name = "movies_post_2010.zip";
+            movieService.readFile(name);
         } catch (Exception e) {
             System.err.print(e);
         }
